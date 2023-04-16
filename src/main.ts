@@ -1,4 +1,5 @@
 import { createApp } from 'vue'
+
 // pinia store
 import { createPinia } from 'pinia'
 // element-ui
@@ -16,5 +17,4 @@ app.use(ElementPlus)
 
 app.use(createPinia())
 app.use(router)
-
 app.mount('#app')

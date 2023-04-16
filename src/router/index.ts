@@ -6,7 +6,10 @@ const router = createRouter({
     {
       path: '/login',
       name: 'login',
-      component: () => import('@/views/AppLogin.vue')
+      component: () => import('@/views/AppLogin.vue'),
+      meta: {
+        layout: 'AppLayoutDefault'
+      }
     }
   ]
 })

@@ -1,18 +1,9 @@
 <script setup lang="ts">
-import { RouterView } from 'vue-router'
+import AppLayout from '@/layouts/AppLayout.vue'
 </script>
 
 <template>
-  <el-container>
-    <el-container>
-      <el-header>
-        <div>toan</div>
-      </el-header>
-      <el-main>
-        <RouterView />
-      </el-main>
-    </el-container>
-  </el-container>
+  <AppLayout />
 </template>
 
 <style scoped></style>
