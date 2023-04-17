@@ -13,7 +13,7 @@
       <div class="form-checkbox">
         <el-checkbox v-model="formLogin.rememberMe">Remember me</el-checkbox>
       </div>
-      <el-button type="primary" class="btn-login" @click="login">Login</el-button>
+      <el-button type="primary" class="btn-login" @click="login(formLogin)">Login</el-button>
       <div class="login-google">
         <span>External login</span>
         <el-button type="danger" icon="el-icon-eleme" class="btn-login"
@@ -25,13 +25,11 @@
 </template>
 
 <script setup lang="ts">
-import { reactive } from 'vue'
-// import { useLogin } from '~/composables/login'
+import { getCurrentInstance, reactive } from 'vue'
+import { useLogin } from '@/composables/login'
 
-// const { login } = useLogin()
-const login = () => {
-  console.log('🚀 ~ file: AppLogin.vue:35 ~ login ~ login:', login)
-}
+const { login } = useLogin(getCurrentInstance()?.appContext.app!)
+
 const formLogin = reactive({
   user: '',
   password: '',
